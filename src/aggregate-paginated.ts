@@ -52,10 +52,10 @@ export const aggregatePaginated = async <TDocument extends BaseDocument>(
     },
   )
 
-  const documents = ((await collection.aggregate([
+  const documents = (await collection.aggregate([
     ...pipeline,
     { $count: 'countDocs' },
-  ])) as unknown) as { countDocs: number }
+  ])) as unknown as { countDocs: number }
 
   const allDocuments = (await collection
     .aggregate([
@@ -81,7 +81,7 @@ export const aggregatePaginated = async <TDocument extends BaseDocument>(
     desiredDocuments.reverse()
   }
 
-  const edges = desiredDocuments.map(document => ({
+  const edges = desiredDocuments.map((document) => ({
     cursor: encodeCursor(buildCursor(document, sort)),
     node: document,
   }))

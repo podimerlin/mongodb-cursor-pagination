@@ -18,7 +18,7 @@ export const createSandbox = async (): Promise<Sandbox> => {
   }
 
   return {
-    seedCollection: async docs => {
+    seedCollection: async (docs) => {
       const collectionName = generateCollectionName()
       const collection = db.collection(collectionName)
       await collection.insertMany(docs)

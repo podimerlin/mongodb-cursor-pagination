@@ -22,10 +22,7 @@ export const urlSafeCursor = (cursor: string) => {
 }
 
 export const unWrapCursor = (cursor: string) => {
-  return cursor
-    .replace(/\+/g, '-')
-    .replace(/\//g, '_')
-    .replace(/=+$/, '')
+  return cursor.replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '')
 }
 
 export const encodeCursor = (cursorObject: CursorObject): string => {
@@ -77,7 +74,8 @@ export const buildQueryFromCursor = (
       // Last item in the clause uses an inequality operator
       if (key === outerKey) {
         const sortOrder = sort[key] ?? 1
-        const operator = sortOrder < 0 ? '$lt' : '$gt'
+        const operator =
+          typeof sortOrder === 'number' && sortOrder < 0 ? '$lt' : '$gt'
         clause[key] = { [operator]: value }
         return clause
       }
@@ -121,7 +119,7 @@ export const normalizeDirectionParams = ({
     return {
       limit: Math.max(1, last ?? 20),
       cursor: before ? decodeCursor(before) : null,
-      sort: (mapValues(sort, (value: number) => value * -1) as unknown) as Sort,
+      sort: mapValues(sort, (value: number) => value * -1) as unknown as Sort,
       paginatingBackwards: true,
     }
   }
