@@ -30,8 +30,8 @@ devDependencies:
     specifier: 17.7.0
     version: 17.7.0
   '@types/base64-url':
-    specifier: 2.2.0
-    version: 2.2.0
+    specifier: 2.2.2
+    version: 2.2.2
   '@types/fs-extra':
     specifier: 11.0.1
     version: 11.0.1
@@ -2458,14 +2458,6 @@ packages:
       '@jridgewell/sourcemap-codec': 1.4.15
     dev: true
 
-  /@mongodb-js/saslprep@1.1.0:
-    resolution: {integrity: sha512-Xfijy7HvfzzqiOAhAepF4SGN5e9leLkMvg/OPOF97XemjfVCYN/oWa75wnkc6mltMSTwY+XlbhWgUOJmkFspSw==}
-    requiresBuild: true
-    dependencies:
-      sparse-bitfield: 3.0.3
-    dev: true
-    optional: true
-
   /@mongodb-js/saslprep@1.1.8:
     resolution: {integrity: sha512-qKwC/M/nNNaKUBMQ0nuzm47b7ZYWQHN3pcXq4IIcoSBc2hOIrflAxJduIvvqmhoz3gR2TacTAs8vlsCVPkiEdQ==}
     dependencies:
@@ -3029,8 +3021,8 @@ packages:
       '@babel/types': 7.22.10
     dev: true
 
-  /@types/base64-url@2.2.0:
-    resolution: {integrity: sha512-adGV3KUTc9uO7kZNQOF3u9WVuKZsgKPsaShZePe+hQXNYd+3dnIK+Y2Wyw7A6M4iIH01xKCRZCZWLQnG9bulIQ==}
+  /@types/base64-url@2.2.2:
+    resolution: {integrity: sha512-tUtfDSDqGZ3QaYdlg0c2pP9NUBh6lRfzjudgrgOByqpfv5mg724X2xYjaNRDa1UPQqewdrPtW6sqDzYXrg+9yA==}
     dev: true
 
   /@types/eslint-visitor-keys@1.0.0:
@@ -7877,7 +7869,7 @@ packages:
       socks: 2.7.1
     optionalDependencies:
       '@aws-sdk/credential-providers': 3.391.0
-      '@mongodb-js/saslprep': 1.1.0
+      '@mongodb-js/saslprep': 1.1.8
     transitivePeerDependencies:
       - aws-crt
     dev: true
