@@ -1,5 +1,5 @@
 {
-  "name": "mongodb-cursor-pagination",
+  "name": "@podimerlin/mongodb-cursor-pagination",
   "version": "0.0.0-development",
   "description": "Cursor-based pagination for MongoDB",
   "license": "MIT",
