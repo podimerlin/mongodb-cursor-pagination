@@ -6,11 +6,8 @@
   "author": "Gustavo P. Cardoso <https://twitter.com/gustavo_pch> Murshid Azher <https://murshidazher.com>",
   "repository": "github:murshidazher/mongo-cursor-pagination",
   "main": "dist/index.js",
-  "module": "dist/mongodb-cursor-pagination.esm.js",
-  "typings": "dist/index.d.ts",
   "files": [
-    "dist",
-    "src"
+    "dist"
   ],
   "scripts": {
     "build": "tsdx build --tsconfig ./tsconfig.build.json",

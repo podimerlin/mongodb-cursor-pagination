@@ -54,7 +54,21 @@ export const findPaginated = async <TDocument extends BaseDocument>(
     },
   )
 
-  const countDocuments = await collection.countDocuments(!cursor ? query : {})
+  const countDocuments = await collection.countDocuments(query);
+
+  //  const explain = await collection
+  //   .find<TDocument>(
+  //     !cursor
+  //       ? query
+  //       : { $and: [query, buildQueryFromCursor(sort, cursor)] },
+  //   )
+  //   .sort(sort)
+  //   .skip(skip ?? 0)
+  //   .limit(limit + 1)
+  //   .project(projection)
+
+  // console.log(await explain.explain());
+    
 
   const allDocuments = (await collection
     .find<TDocument>(
